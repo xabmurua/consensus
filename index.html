@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Consensus Flow</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <h1>Consensus Flow</h1>
+        <p>Graba, transcribe y delibera consenso automáticamente.</p>
+      </header>
+
+      <section class="panel controls">
+        <div class="actions">
+          <button id="start-btn">Iniciar</button>
+          <button id="stop-btn" class="ghost">Detener</button>
+          <button id="analyze-btn">Deliberar</button>
+          <button id="clear-btn" class="ghost">Limpiar</button>
+        </div>
+        <p id="status" class="status">Estado: lista</p>
+        <audio id="audio" controls></audio>
+        <a id="download" hidden>Descargar audio</a>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <h2>Transcripción viva</h2>
+          <div id="transcript" class="box"></div>
+        </article>
+
+        <article class="panel">
+          <h2>Síntesis de consenso</h2>
+          <div id="consensus" class="box"></div>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Deliberaciones</h2>
+        <div id="list" class="list"></div>
+      </section>
+    </main>
+
+    <template id="item-template">
+      <article class="item">
+        <h3 class="topic"></h3>
+        <p class="proposal"></p>
+        <p class="meta"></p>
+      </article>
+    </template>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
